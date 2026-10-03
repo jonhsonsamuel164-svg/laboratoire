@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demande de devis — Laboratoire International de Chimie Monétaire">
+  <title>Demande de devis | Laboratoire International de Chimie Monétaire</title>
+  <link rel="canonical" href="https://www.labochimiemonetaire.com/devis.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar"><div class="container topbar-inner"><div>info@labochimiemonetaire.com</div><div><a href="tel:+33605690470">+33 6 05 69 04 70</a></div></div></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">LICM</span><span><strong>Laboratoire International</strong><small>de Chimie Monétaire</small></span></a>
+      <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="presentation.html">Présentation</a></li>
+          <li class="menu-has-sub">
+            <a href="index.html#services">Nos Prestations</a>
+            <div class="submenu">
+              <a href="services/nettoyage.html">Nettoyage de billets</a>
+              <a href="services/impression.html">Impression de billets</a>
+              <a href="services/materiels.html">Matériels et Produits</a>
+              <a href="services/consulting.html">Consulting | Conseils</a>
+            </div>
+          </li>
+          <li><a href="multimedia.html">Multimédia</a></li>
+          <li><a href="contact.html">Contactez-nous</a></li>
+          <li><a class="btn btn-gold nav-cta active" href="devis.html">Demandez un devis</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="page-hero"><div class="container"><p class="kicker">Devis</p><h1>Demande de devis</h1><p>Remplissez le formulaire pour obtenir une proposition personnalisée.</p></div></section>
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <div class="panel">
+        <div class="alert">Votre demande a bien été envoyée. Notre équipe vous contactera prochainement.</div>
+        <form>
+          <div class="form-row">
+            <div><label for="nom">Nom *</label><input id="nom" name="nom" required></div>
+            <div><label for="prenom">Prénom</label><input id="prenom" name="prenom"></div>
+          </div>
+          <div class="form-row">
+            <div><label for="entreprise">Entreprise</label><input id="entreprise" name="entreprise"></div>
+            <div><label for="email">E-mail *</label><input id="email" type="email" name="email" required></div>
+          </div>
+          <div class="form-row">
+            <div><label for="telephone">Téléphone *</label><input id="telephone" name="telephone" required></div>
+            <div>
+              <label for="pays">Pays *</label>
+              <select id="pays" name="pays" required>
+                <option value="">Sélectionnez un pays</option>
+                <option value="FR">France</option>
+                <option value="BE">Belgique</option>
+                <option value="CH">Suisse</option>
+                <option value="LU">Luxembourg</option>
+                <option value="CA">Canada</option>
+                <option value="OTHER">Autre</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="type_demande">Type de demande *</label>
+            <select id="type_demande" name="type_demande" required>
+              <option value="">Sélectionnez le type de demande</option>
+              <option value="nettoyage">Nettoyage de billets</option>
+              <option value="impression">Impression de billets</option>
+              <option value="materiels">Matériels et produits</option>
+              <option value="consulting">Consulting / Conseils</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div><label for="description">Description de la demande *</label><textarea id="description" name="description" rows="5" required></textarea></div>
+          <div><label for="piece_jointe">Pièce jointe</label><input id="piece_jointe" type="file" name="piece_jointe"><p class="lead">Formats acceptés : PDF, JPG, PNG (max 5 Mo)</p></div>
+          <div>
+            <label>Mode de contact préféré *</label>
+            <label class="check"><input type="checkbox" name="contact_mode" value="telephone"> Téléphone</label>
+            <label class="check"><input type="checkbox" name="contact_mode" value="whatsapp"> WhatsApp</label>
+            <label class="check"><input type="checkbox" name="contact_mode" value="email"> E-mail</label>
+          </div>
+          <label class="check"><input type="checkbox" required> J'accepte que mes données soient utilisées pour traiter ma demande *</label>
+          <button class="btn btn-gold" type="submit">Envoyer la demande</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="container contact-cards">
+      <article class="card"><h3>Téléphone</h3><p>+33 6 05 69 04 70</p></article>
+      <article class="card"><h3>WhatsApp</h3><p>+33 6 05 69 04 70</p></article>
+      <article class="card"><h3>E-mail</h3><p>info@labochimiemonetaire.com</p></article>
+      <article class="card"><h3>Adresse</h3><p>Brest, France</p></article>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer-grid">
+      <div><h3>LICM</h3><p>Solutions innovantes pour le traitement de billets de banque sécurisés.</p></div>
+      <div><h3>Liens</h3><p><a href="index.html">Accueil</a><br><a href="contact.html">Contact</a></p></div>
+      <div><h3>Légal</h3><p><a href="mentions-legales.html">Mentions légales</a></p></div>
+    </div>
+    <div class="container legal"><span>© 2024-2025 Laboratoire International de Chimie Monétaire.</span></div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/33605690470?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis." target="_blank" rel="noopener">WA</a>
+  <script src="script.js"></script>
+</body>
+</html>
