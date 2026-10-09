@@ -32,6 +32,10 @@ body {
   line-height: 1.7;
 }
 
+::selection {
+  background: rgba(196, 163, 90, 0.28);
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -367,6 +371,52 @@ nav a.active {
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-bottom: 6px;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.96));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(11, 29, 44, 0.04);
+}
+
+.stat-card strong {
+  display: block;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  color: var(--navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Sections */
@@ -742,11 +792,16 @@ footer a:hover {
   .contact-cards,
   .gallery,
   .footer-grid,
-  .form-row {
+  .form-row,
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-content {
     padding: 90px 0 80px;
+  }
+
+  .section-intro {
+    margin-bottom: 24px;
   }
 }

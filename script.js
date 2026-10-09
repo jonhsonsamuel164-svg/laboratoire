@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("nav");
   if (toggle && nav) {
-    toggle.addEventListener("click", () => nav.classList.toggle("open"));
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      const isOpen = nav.classList.contains("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
   }
 
   const slides = [...document.querySelectorAll(".hero-slide")];
@@ -19,6 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.forEach((dot, n) => dot.addEventListener("click", () => show(n)));
     setInterval(() => show(index + 1), 6500);
   }
+
+  const revealItems = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealItems.forEach((item) => observer.observe(item));
 
   document.querySelectorAll("form").forEach((form) => {
     form.addEventListener("submit", (event) => {
